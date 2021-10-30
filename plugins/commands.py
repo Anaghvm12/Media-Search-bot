@@ -92,8 +92,9 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_text(
-            START_MSG,
+        await cmd.reply_photo(random.choice(["https://telegra.ph/file/a2567627ff1f91714390e.jpg","https://telegra.ph/file/2515472fcf65fd1fa8758.jpg"])) ]
+    caption=START_TEXT.format(update.from_user.first_name),
+            reply_markup=reply_markup,
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
